@@ -2,12 +2,10 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 
 const SUPABASE_URL = 'https://dtwqrqnvxuoextnhmbjs.supabase.co'; 
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR0d3FycW52eHVvZXh0bmhtYmpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1MTY0MDQsImV4cCI6MjA3NTA5MjQwNH0.HaQXFaigtGt4psH4ycnBUcCGwBVH02MVWnfiBUbU5V4';   
-// substitua (a chave é longa)
 
-// não edite abaixo
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-let funcionariosMap = {}; //objeto funcionário
+let funcionariosMap = {}; 
 
 
 async function carregarFuncionarios() {
