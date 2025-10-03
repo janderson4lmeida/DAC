@@ -16,7 +16,7 @@ async function carregarFuncionarios() {
 
     if (error) {
         console.error('Erro ao carregar funcionários:', error);
-        alert('Erro ao carregar funcionários — veja console (F12).');
+        alert('Erro ao carregar funcionários!');
         return;
     }
 
