@@ -1,35 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #fafafa;
-    color: #222;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+
+
+    background: #024221;
+    color: #333;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
 h1 {
-    color: #062B4B;
+    color: #fafafa;
+    font-weight: 700;
+    text-align: center;
+
 }
 
+
+section,
+#painelRH,
+#painelUser {
+
+    background: #fafafa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    width: 90%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+
+#loginSection {
+    max-width: 400px;
+    text-align: center;
+
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#loginSection h2 {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+#loginSection>input,
+#loginSection>button {
+    margin: 5px 0;
+    width: 90%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+#loginSection input[type="text"],
+#loginSection input[type="password"],
+#loginSection button {
+    display: block;
+}
+
+#painelRH input,
+#painelRH select {
+    max-width: 200px;
+    display: inline-block;
+}
+
+input,
+select {
+    margin: 8px 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+
+select {
+    width: 212px;
+}
+
+
+
 button {
-    margin: 6px;
-    padding: 8px 12px;
-    border-radius: 6px;
+    margin: 8px 5px;
+    padding: 10px 15px;
+    border-radius: 8px;
     border: none;
-    background: #F35410;
-    color: white;
+    font-weight: 600;
     cursor: pointer;
+    transition: background 0.3s ease;
+    color: white;
+    background: #F35410;
 }
 
 button:hover {
-    opacity: 0.9;
+    background: #e04a0e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    background: white;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-    margin-bottom: 12px;
+li button {
+    padding: 5px 10px;
+    font-size: 0.85em;
+    margin-left: 10px;
 }
+
 
 ul {
     list-style: none;
@@ -37,6 +126,55 @@ ul {
 }
 
 li {
-    padding: 6px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95em;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 25px 0;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+
+    input,
+    select,
+    button {
+        max-width: 100%;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+
+    #loginSection {
+        max-width: 100%;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    #loginSection input {
+        display: block;
+    }
 }

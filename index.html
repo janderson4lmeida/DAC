@@ -2,34 +2,82 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="utf-8" />
     <title>Sistema de Ponto - AV1 </title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <h1>Sistema de Ponto</h1>
 
-    <section>
-        <h2>Grupo de colaboradores</h2>
-        <p></p>
-        <ul id="lista-funcionarios"></ul>
+    <section id="loginSection">
+        <h2>Login</h2>
+        <input id="email" type="text" placeholder="E-mail">
+        <input id="senha" type="password" placeholder="Senha">
+        <button id="btnLogin">Entrar</button>
     </section>
 
-    <section>
-        <h2>Registro de ponto</h2>
-        <select id="funcionarioSelect"></select>
-        <button id="btnEntrada">Registrar Entrada</button>
-        <button id="btnSaida">Registrar Saída</button>
+    <section id="painelSection" style="display:none;">
+        <h2 id="bemVindo"></h2>
+        <button id="btnLogout">Sair</button>
+
+
+        <hr>
+
+        <div id="painelUser">
+            <h3>Registrar Ponto</h3>
+            <button onclick="registrarPonto('Entrada')">Registrar Entrada</button>
+            <button onclick="registrarPonto('Saída')">Registrar Saída</button>
+
+            <h3>Meus Registros</h3>
+            <ul id="meusRegistros"></ul>
+        </div>
+
+        <div id="painelRH" style="display:none;">
+            <h3>Colaboradores</h3>
+            <ul id="listaUsuarios"></ul>
+
+            <h4>Adicionar Usuário</h4>
+            <input id="novoNome" placeholder="Nome">
+            <input id="novoEmail" placeholder="Email">
+            <input id="novoSenha" placeholder="Senha">
+
+            <select id="novoCargo">
+                <option value="" disabled selected>Selecione o Cargo</option>
+
+            </select>
+            <button id="btnAddUser">Adicionar</button>
+
+
+            <hr>
+            <h4>Editar Usuário Selecionado</h4>
+            <div id="edicaoUsuario" style="display:none;">
+                <input id="editId" type="hidden">
+                <input id="editNome" placeholder="Novo Nome">
+                <input id="editEmail" placeholder="Novo Email">
+                <input id="editSenha" type="password" placeholder="Nova Senha (Opcional)">
+                <select id="editCargo"></select>
+                <button id="btnSalvarEdicao">Salvar</button>
+                <button id="btnCancelarEdicao">Cancelar</button>
+            </div>
+
+
+            <hr>
+            <h3>Todos os Registros</h3>
+            <ul id="todosRegistros"></ul>
+
+        </div>
+
+
     </section>
 
-    <section>
-        <h2>Histórico de registros</h2>
-        <ul id="lista-registros"></ul>
-    </section>
 
-    <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
